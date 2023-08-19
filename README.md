@@ -18,7 +18,7 @@
 
 
 
-<img src= 'https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1
+<img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1
 ' height="20" width="100%">
 
 <table><tr><td>Actividades</td><td>Calendario</td></tr>
@@ -43,7 +43,7 @@
 </td></tr>
 </table>
 
-<img src= 'https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1
+<img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1
 ' height="20" width="100%"></div>
 
 
