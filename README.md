@@ -1,13 +1,6 @@
 <div align='center'>
 
-<img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'>
-
-<img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'>
-<img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'>
-
-
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=1e90FF&center=true&width=635&lines=Proyecto-de-Software"/>
+<img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'><img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=1e90FF&center=true&width=635&lines=Proyecto-de-Software"/>
 
 </div>
 
