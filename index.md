@@ -77,7 +77,7 @@
 <tr><td>
 
 
-- [Practica 1 Lógica y Cardinalidad]()
+- [All The Tags](https://allthetags.com/)
 
 </td><td>
 
