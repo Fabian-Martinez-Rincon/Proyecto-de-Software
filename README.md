@@ -1,12 +1,7 @@
 <div align='center'>
 
 <img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'><img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=1e90FF&center=true&width=635&lines=Proyecto-de-Software"/>
-
-</div>
-
-<a title="" href="https://cafecito.app/ei-materias"><img src="/Documentos/Cafecito.png" alt="" /></a>
-
-<img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%">
+<a title="" href="https://cafecito.app/ei-materias"><img src="/Documentos/Cafecito.png" alt="" /></a><img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%"></div>
 
 <div align='center'><table><tr><td>Actividades</td><td>Calendario</td></tr>
 
