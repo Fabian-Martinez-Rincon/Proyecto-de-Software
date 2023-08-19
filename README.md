@@ -25,14 +25,14 @@
 </td><td>
 
 
-- **01/09/2023** Actividad Teorica 1
-- **06/10/2023** Actividad Teorica 2
-- **03/11/2023** Actividad Teorica 3
-- **01/12/2023** Actividad Teorica 4
-- **01/09/2023** Actividad Practica 1
-- **15/09/2023** Actividad Practica 2
-- **20/10/2023** Entrega Practica Primera Parte
-- **24/11/2023** Entrega Practica Segunda Parte
+- [ ] **01/09/2023** Actividad Teorica 1
+- [ ] **06/10/2023** Actividad Teorica 2
+- [ ] **03/11/2023** Actividad Teorica 3
+- [ ] **01/12/2023** Actividad Teorica 4
+- [ ] **01/09/2023** Actividad Practica 1
+- [ ] **15/09/2023** Actividad Practica 2
+- [ ] **20/10/2023** Entrega Practica Primera Parte
+- [ ] **24/11/2023** Entrega Practica Segunda Parte
 
 </td></tr>
 </table></div>
