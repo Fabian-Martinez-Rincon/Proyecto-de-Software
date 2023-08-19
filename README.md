@@ -15,7 +15,7 @@
 
 <img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%">
 
-<table><tr><td>Actividades</td><td>Calendario</td></tr>
+<div align='center'><table><tr><td>Actividades</td><td>Calendario</td></tr>
 
 <tr><td>
 
@@ -35,7 +35,7 @@
 - **24/11/2023** Entrega Practica Segunda Parte
 
 </td></tr>
-</table>
+</table></div>
 
 <img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%"></div>
 
