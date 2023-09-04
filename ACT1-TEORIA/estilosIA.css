@@ -178,14 +178,7 @@ label {
   height: 30px; /* Altura más pequeña para los inputs */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  #contact label,
-  #contact input,
-  #contact textarea {
-    width: 100%;
-  }
-}
+
 
 
 
@@ -196,31 +189,80 @@ label {
   padding: 20px;
 }
 
-/* Media queries para hacer el borde del formulario responsive */
+
+
+/* Estilos generales para los cursos */
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.course-item {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* Pie de página pegajoso */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilos responsive */
+@media (max-width: 1024px) {
+  .course-item {
+    flex: 1 1 calc(50% - 20px); /* Ajustar según necesidades */
+  }
+  .container {
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
+  .course-item {
+    flex: 1 1 calc(33.333% - 20px); /* Ajustar según necesidades */
+  }
+}
+
 @media (max-width: 768px) {
+  .course-item {
+    flex: 1 1 calc(33.333% - 20px); /* Ajustar según necesidades */
+    width: 45%;
+  }
+  .container {
+    width: 90%; /* Reducir el ancho en pantallas más pequeñas */
+  }
   .responsive-form {
     border-radius: 5px;
   }
-}
-
-@media (max-width: 480px) {
-  .responsive-form {
-    border-radius: 2px;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  
   nav a {
     display: block;
     margin: 10px 0;
   }
+}
 
+@media (max-width: 480px) {
+  .course-grid {
+    flex-direction: column;
+  }
+  .responsive-form {
+    border-radius: 2px;
+  }
   .course-item {
-    width: 45%;
+    flex: 1 1 calc(33.333% - 20px); /* Ajustar según necesidades */
   }
 }
+
+
+
+
 
 @media (max-width: 768px) {
   .container {
@@ -246,39 +288,11 @@ label {
   }
 }
 
-/* Estilos generales para los cursos */
-.course-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.course-item {
-  flex: 1;
-  margin: 10px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Estilos responsive */
-@media (max-width: 1024px) {
-  .course-item {
-    flex: 1 1 calc(50% - 20px); /* Ajustar según necesidades */
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .course-item {
-    flex: 1 1 calc(33.333% - 20px); /* Ajustar según necesidades */
-  }
-}
-
-@media (max-width: 480px) {
-  .course-grid {
-    flex-direction: column;
-  }
-  .course-item {
-    flex: 1 1 100%;
+  #contact label,
+  #contact input,
+  #contact textarea {
+    width: 100%;
   }
 }
