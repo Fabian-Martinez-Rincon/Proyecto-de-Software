@@ -9,7 +9,7 @@
 
 
 - [All The Tags](https://allthetags.com/)
-- [Web Primera Entrega](/ACT1-TEORIA/index.html)
+- [Web Primera Entrega](https://fabian-martinez-rincon.github.io/Proyecto-de-Software/ACT1-TEORIA/index.html)
 
 </td><td>
 
