@@ -59,3 +59,10 @@ Aunque hay múltiples reglas de estilo que podrían afectar al elemento `<h1>`, 
 
 Por lo tanto, debido a la prioridad del estilo inline, el texto "Mi color favorito" se mostrará en color rojo.
 
+## Enunciado
+
+![image](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/assets/55964635/40660e6f-f0c3-42bf-940c-c0446e096b18)
+
+![image](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/assets/55964635/f8d0381e-f1c9-4183-9652-f4aad42653b1)
+
+
