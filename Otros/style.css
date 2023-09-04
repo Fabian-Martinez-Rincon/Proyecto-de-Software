@@ -1,0 +1,51 @@
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.image-container {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container p {
+  margin-top: 8px;
+}
+
+.image-container img {
+  max-width: 300px;  /* Ancho máximo */
+  max-height: 300px; /* Altura máxima */
+  height: auto;      /* Mantener las proporciones */
+  margin: auto;      /* Centrar la imagen si es más pequeña que el tamaño máximo */
+}
+
+input[type="radio"] {
+
+}
+
+.image {
+  display: none;
+
+  visibility: hidden;
+}
+
+#all:checked ~ .image,
+#nature:checked ~ .nature,
+#animals:checked ~ .animal {
+  display: block;
+  visibility: hidden;
+}

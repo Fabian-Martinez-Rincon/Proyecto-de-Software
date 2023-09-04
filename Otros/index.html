@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="/Otros/style.css">
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+
+    <div class="filter">
+        <input type="radio" id="all" name="category">
+        <label for="all">Todos</label>
+
+        <input type="radio" id="naturaleza" name="category" >
+        <label for="naturaleza">Naturaleza</label>
+
+        <input type="radio" id="animales" name="category" checked>
+        <label for="animales">Animales</label>
+    </div>
+
+    <div class="gallery">
+        <div class="image-container naturaleza">
+            <img src="/Otros/image.jpg" alt="Imagen 1">
+            <p>Descripción 1</p>
+        </div>
+        <div class="image-container animales">
+            <img src="/Otros/image.png" alt="Imagen 2">
+            <p>Descripción 2</p>
+        </div>
+    </div>
+</body>
+</html>

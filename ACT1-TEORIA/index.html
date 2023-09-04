@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución X - Cursos de Inglés y Francés</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+    <div class="container">
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#contact">Contacto</a>
+        <a href="#about">Acerca de Nosotros</a>
+        <a href="#courses">Cursos</a>
+        <a href="#terms">Términos y Condiciones</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+    </nav>
+
+    <!-- Sección principal -->
+    <main>
+
+        <!-- Inicio -->
+        <section id="home">
+            <h2>Bienvenidos a Institución X</h2>
+            <p>Aquí puedes encontrar cursos de calidad en inglés y francés. Navega para más información.</p>
+        </section>
+
+        <!-- Información de contacto -->
+        <section id="contact" style="border: none;">
+            <h2>Contacto</h2>
+            <form action="#" method="post" class="responsive-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <!-- Información de quien mantiene el sitio -->
+        <section id="about">
+            <h2>Acerca de Nosotros</h2>
+            <p>Institución X ha estado ofreciendo cursos de calidad en inglés y francés desde 1985...</p>
+        </section>
+
+       <!-- Catálogo de cursos -->
+          <section id="courses">
+            <h2>Catálogo de Cursos</h2>
+            <p>Selecciona una categoría para ver los cursos disponibles. Luego desplázate hacia abajo para ver los cursos de la categoría elegida.</p>
+
+            <fieldset>
+              <legend>Selecciona una categoría</legend>
+              <!-- Menú desplegable -->
+              <select id="course_category" name="course_category">
+                <option value="">--Elige una categoría--</option>
+                <option value="english">Inglés</option>
+                <option value="french">Francés</option>
+              </select>
+
+              <!-- Botones de radio -->
+              <label>
+                  <input type="radio" name="course_category" value="english">
+                  <a href="#english_courses">Inglés</a>
+              </label>
+
+              <label>
+                  <input type="radio" name="course_category" value="french">
+                  <a href="#french_courses">Francés</a>
+              </label>
+            </fieldset>
+
+            <!-- Sección de cursos en inglés -->
+            <section id="english_courses">
+              <h3 align="center">Cursos de Inglés</h3>
+              <ul class="course-grid">
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles1.pdf">Inglés Principiante</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles2.pdf">Inglés Intermedio</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles3.pdf">Inglés Avanzado</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles4.pdf">Inglés para Negocios</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles5.pdf">Inglés Técnico</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles6.pdf">Inglés Conversacional</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles7.pdf">Preparación para el examen TOEFL</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles8.pdf">Preparación para el examen IELTS</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles9.pdf">Inglés para Viajeros</a></li>
+                  <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_ingles10.pdf">Inglés para Niños</a></li>
+              </ul>
+            </section>
+            
+            <section id="french_courses">
+              <h3 align="center">Cursos de Francés</h3>
+              <ul class="course-grid">
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances1.pdf">Frances Principiante</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances2.pdf">Frances Intermedio</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances3.pdf">Frances Avanzado</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances4.pdf">Frances para Negocios</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances5.pdf">Frances Técnico</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances6.pdf">Frances Conversacional</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances7.pdf">Preparación para el examen TOEFL</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances8.pdf">Preparación para el examen IELTS</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances9.pdf">Frances para Viajeros</a></li>
+                <li class="course-item"><a href="/ACT1-TEORIA/programas/curso_frances10.pdf">Frances para Niños</a></li>
+            </ul>
+            </section>
+
+
+        <!-- Términos y Condiciones -->
+        <section id="terms">
+            <h2>Términos y Condiciones</h2>
+            <p>Al inscribirse en nuestros cursos, usted acepta los siguientes términos y condiciones...</p>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <ul>
+                <li>¿Cómo me inscribo en un curso?</li>
+                <li>¿Qué nivel de inglés o francés necesito tener para inscribirme?</li>
+                <!-- Más preguntas -->
+            </ul>
+        </section>
+
+        
+
+    </main>
+      </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

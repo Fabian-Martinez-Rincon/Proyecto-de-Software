@@ -1,0 +1,284 @@
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* O el color que prefieras */
+  
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  width: 60%; /* Puedes ajustar el ancho según tus necesidades */
+  background-color: #fff; /* O el color que prefieras para el fondo del contenido */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  overflow: hidden; /* Esconde el contenido que se sale del contenedor */
+  text-align: center; /* Centra el texto */
+}
+
+
+/* Estilo para la barra de navegación */
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilo para el formulario de contacto */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para las secciones de información */
+section {
+  margin-bottom: 40px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fff;
+}
+
+
+
+h2 {
+  font-size: 24px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
+
+a {
+  color: blue;
+}
+
+/* Estilo para los radio buttons */
+label {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Estilo para la lista de cursos */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.course-item {
+  border: 2px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.course-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.course-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos para el formulario */
+#contact {
+  width: 100%;
+  max-width: 600px; /* Puedes ajustar este valor según tus necesidades */
+  margin: auto;
+  padding: 20px;
+  
+}
+
+#contact form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#contact label,
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Para hacer los campos más pequeños */
+#contact input[type="text"],
+#contact input[type="email"] {
+  height: 30px; /* Altura más pequeña para los inputs */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contact label,
+  #contact input,
+  #contact textarea {
+    width: 100%;
+  }
+}
+
+
+
+/* Estilos generales del borde del formulario */
+.responsive-form {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Media queries para hacer el borde del formulario responsive */
+@media (max-width: 768px) {
+  .responsive-form {
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-form {
+    border-radius: 2px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .course-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  
+  nav {
+    font-size: 0.8em;
+  }
+
+  .course-item {
+    width: 100%;
+  }
+}
+
+/* Estilos generales para los cursos */
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.course-item {
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos responsive */
+@media (max-width: 1024px) {
+  .course-item {
+    flex: 1 1 calc(50% - 20px); /* Ajustar según necesidades */
+  }
+}
+
+@media (max-width: 768px) {
+  .course-item {
+    flex: 1 1 calc(33.333% - 20px); /* Ajustar según necesidades */
+  }
+}
+
+@media (max-width: 480px) {
+  .course-grid {
+    flex-direction: column;
+  }
+  .course-item {
+    flex: 1 1 100%;
+  }
+}
