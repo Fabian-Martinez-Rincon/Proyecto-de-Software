@@ -1,20 +1,21 @@
-<div align='center'>
 
-<img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'><img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=1e90FF&center=true&width=635&lines=Proyecto-de-Software"/>
-<img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%"></div>
 
-<div align='center'><table><tr><td>Actividades</td><td>Calendario</td></tr>
+<div align="center"> 
 
-<tr><td>
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
+[![GitHub stars](https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Programacion-Concurrente)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/stargazers/)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Programacion-Concurrente)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=F78E23&center=true&width=435&lines=Proyecto-de-Software"/></div>
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
 
 
 - [All The Tags](https://allthetags.com/)
 - [Web Primera Entrega](https://fabian-martinez-rincon.github.io/Proyecto-de-Software/ACT1-TEORIA/index.html)
-
-</td><td>
-
-
-- [ ] **01/09/2023** Actividad Teorica 1
+- [x] **01/09/2023** Actividad Teorica 1
 - [ ] **06/10/2023** Actividad Teorica 2
 - [ ] **03/11/2023** Actividad Teorica 3
 - [ ] **01/12/2023** Actividad Teorica 4
@@ -23,11 +24,9 @@
 - [ ] **20/10/2023** Entrega Practica Primera Parte
 - [ ] **24/11/2023** Entrega Practica Segunda Parte
 
-</td></tr>
-</table></div>
 
-<img src='https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/23277383-db80-4d02-bbc7-114d835518d1' height="20" width="100%"></div>
 
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### ¿De qué color se muestra el texto "Mi color favorito"?
 
