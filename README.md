@@ -2,13 +2,12 @@
 
 <div align="center"> 
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
-[![GitHub stars](https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/stargazers/)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
+<img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'>
+<img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=F78E23&center=true&width=435&lines=Proyecto-de-Software"/></div>
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+---
 
 
 
@@ -21,7 +20,7 @@
 
 
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+---
 
 ### Clase 0 Presentacion + Python
 
@@ -61,7 +60,7 @@ from src import operations
 
 [Codigo Practica 1](/practica/explicacionPracticaUno/)
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+---
 
 
 ### Clase 1 Git
@@ -88,19 +87,33 @@ El comando `git push origin main` es un comando de Git que permite enviar los ca
 
 En este comando, `origin` se refiere al repositorio remoto donde se están enviando los cambios, y `main` se refiere a la rama del repositorio local que se está enviando al repositorio remoto.
 
+Ahora si queremos crear una rama podemos hacer git branch y el nombre de la rama
+
+```shell
+git branch nombreRama
+```
+
+y para subir los cambios 
+
+```shell
+git push origin nombreRama
+```
+
+
+
+
+
+
+
 ---
-
-
-
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Clase 2 Aplicacion Base + Deploy
 
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+---
 
 ### Clase 3 MVC + BluePrints
 
-<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+---
 
 ### Clase 4 Database + Configs + ORM
