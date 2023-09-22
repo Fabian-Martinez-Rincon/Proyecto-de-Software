@@ -15,53 +15,73 @@
 
 - [All The Tags](https://allthetags.com/)
 - [Web Primera Entrega](https://fabian-martinez-rincon.github.io/Proyecto-de-Software/ACT1-TEORIA/index.html)
-- [x] **01/09/2023** Actividad Teorica 1
-- [ ] **06/10/2023** Actividad Teorica 2
-- [ ] **03/11/2023** Actividad Teorica 3
-- [ ] **01/12/2023** Actividad Teorica 4
-- [ ] **01/09/2023** Actividad Practica 1
-- [ ] **15/09/2023** Actividad Practica 2
-- [ ] **20/10/2023** Entrega Practica Primera Parte
-- [ ] **24/11/2023** Entrega Practica Segunda Parte
+- [Enunciado Primera Entrega](/Documentos/enunciado1raEntrega.md)
+
+
 
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
-### ¿De qué color se muestra el texto "Mi color favorito"?
+### Clase 0 Presentacion + Python
 
-```html
+En la primera parte explicamos la modalidad de la materia en general.
+Las fechas de las entregas practicas serian las siguientes
 
-    <!DOCTYPE html>
-    <html lang="es">
+- Entrega Parte 1: 20/10
 
-    <head>
-        <title>Jugando con estilos</title>
-        <style>
-             h1 {color:orange}
-                h1.verde {color: green}
-                 .azul {color: blue}
-             #amarillo {color: yellow}
-        </style>
-    </head>
+En la segunda parte de la clase vimos un poco de python y hicimos una calculadora basica
 
-    <body>
-        <h1 class="verde" id="amarillo" style="color:red"> Mi color favorito</h1>
-    </body>
 
-    </html>
+
+- **1)** **Marca de Paquete:** \
+   El archivo `__init__.py` en un directorio es una marca que indica que el directorio debe tratarse como un paquete de Python. Sin este archivo, el directorio no se considerará un paquete y no se podrán importar sus módulos desde otros lugares del código.
+- **2)** **Inicialización de Paquete:** \
+   Puedes colocar código de inicialización en el archivo `__init__.py`. Esto puede incluir importaciones de módulos, definición de variables o cualquier otra inicialización necesaria para el paquete.
+- **3)** **Contenido Opcional:**\
+   El archivo `__init__.py` puede estar vacío si no es necesario realizar ninguna inicialización específica para el paquete. A menudo, este archivo está presente simplemente para marcar el directorio como un paquete.
+- **4)** **Importaciones Automáticas:**\
+   Si defines importaciones en el archivo `__init__.py`, esas importaciones se ejecutarán automáticamente cada vez que importes el paquete. Esto puede ser útil para organizar y centralizar las importaciones en un solo lugar.
+
+Hicimos una calculadora media pedorra pero tuve algunos incovenientes con python porque  no me acordaba mucho xd
+
+
+> **Nota:** \Esto no lo podemos usar si estamos en el main
+```python
+import operations
 ```
 
-El texto "Mi color favorito" se mostrará en color **rojo**.
+Por lo que tenemos que hacer
 
-Aunque hay múltiples reglas de estilo que podrían afectar al elemento `<h1>`, la prioridad de aplicación de estilos en CSS se determina por la especificidad y el orden en el que se definen. Además, cualquier estilo definido directamente en un elemento HTML usando el atributo `style` tiene la máxima prioridad.
-
-Por lo tanto, debido a la prioridad del estilo inline, el texto "Mi color favorito" se mostrará en color rojo.
-
-## Enunciado
-
-![image](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/assets/55964635/40660e6f-f0c3-42bf-940c-c0446e096b18)
-
-![image](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/assets/55964635/f8d0381e-f1c9-4183-9652-f4aad42653b1)
+> **Nota:** \Esto no lo podemos usar si estamos en el main 
+```python
+from src import operations
+```
 
 
+[Codigo Practica 1](/practica/explicacionPracticaUno/)
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+
+### Clase 1 Git
+
+[Vemos la actividad 1](/practica/Actividad%201%20-%20Conceptos%20generales%20Git.pdf)
+
+El profe empieza a explicar la practica del pdf asi por encima
+
+- **Clave SSH**: (Secure Shell) es una forma de autenticación segura que se utiliza para establecer conexiones seguras entre dispositivos en una red, como por ejemplo, entre tu computadora y un servidor remoto. Se utiliza principalmente para autenticarse en servidores remotos de forma segura y cifrada.
+
+
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+### Clase 2 Aplicacion Base + Deploy
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+### Clase 3 MVC + BluePrints
+
+<img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
+
+### Clase 4 Database + Configs + ORM
