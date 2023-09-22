@@ -3,8 +3,8 @@
 <div align="center"> 
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
-[![GitHub stars](https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Programacion-Concurrente)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/stargazers/)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Programacion-Concurrente)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
+[![GitHub stars](https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software/stargazers/)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software)](https://github.com/Fabian-Martinez-Rincon/Proyecto-de-Software)
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=F78E23&center=true&width=435&lines=Proyecto-de-Software"/></div>
 
@@ -16,7 +16,7 @@
 - [All The Tags](https://allthetags.com/)
 - [Web Primera Entrega](https://fabian-martinez-rincon.github.io/Proyecto-de-Software/ACT1-TEORIA/index.html)
 - [Enunciado Primera Entrega](/Documentos/enunciado1raEntrega.md)
-
+- [Autoevaluacion de Conceptos Basicos](/practica/Actividad%201%20-%20Conceptos%20generales%20Git.pdf)
 
 
 
@@ -72,11 +72,30 @@ El profe empieza a explicar la practica del pdf asi por encima
 
 - **Clave SSH**: (Secure Shell) es una forma de autenticación segura que se utiliza para establecer conexiones seguras entre dispositivos en una red, como por ejemplo, entre tu computadora y un servidor remoto. Se utiliza principalmente para autenticarse en servidores remotos de forma segura y cifrada.
 
+Hablamos de la rama origin, hacemos referencia al repositorio remoto
+
+```shell
+git remote -v
+```
+
+Tambien usamos el comando
+
+```shell
+git push origin main
+```
+
+El comando `git push origin main` es un comando de Git que permite enviar los cambios realizados en el repositorio local al repositorio remoto.
+
+En este comando, `origin` se refiere al repositorio remoto donde se están enviando los cambios, y `main` se refiere a la rama del repositorio local que se está enviando al repositorio remoto.
+
+---
+
 
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
 ### Clase 2 Aplicacion Base + Deploy
+
 
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
 
