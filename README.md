@@ -16,7 +16,7 @@
 - [Web Primera Entrega](https://fabian-martinez-rincon.github.io/Proyecto-de-Software/ACT1-TEORIA/index.html)
 - [Enunciado Primera Entrega](/Documentos/enunciado1raEntrega.md)
 - [Autoevaluacion de Conceptos Basicos](/practica/Actividad%201%20-%20Conceptos%20generales%20Git.pdf)
-
+- Vamos a usar python 3.8.10
 
 
 
@@ -100,14 +100,34 @@ git push origin nombreRama
 ```
 
 
+Tambien usamos el git rebase
 
 
+> Parece que ya no vemos nada importante, solo vemos como el profe va creando y fucionando las ramas, lo que si, podemos tener conflictos(o por lo menos yo) a la hora de hacer un pull en una rama que no es la main, por lo que tenemos que hacer un git pull origin main y despues un git push origin nombreRama
 
 
 
 ---
 
 ### Clase 2 Aplicacion Base + Deploy
+
+Vamos a levantar la aplicacion base para despues continuar con el trabajo integrador
+
+- [Enunciado de la actividad 2](/Otros/Actividad%202%20-%20Aplicación%20base.pdf)
+
+
+***Explicamos la infra***
+
+Cada uno trabaja en su rama, y despues hace un merge a main, y con esto, se ejecuta el 'ci' que es un script que nos permite hacer integracion continua.
+
+Con este script de CI, cada vez que hagas un push en la rama principal, GitHub Actions construirá tu aplicación, instalará las dependencias, ejecutará las pruebas y te notificará si hay algún error. Asegúrate de ajustar las versiones y configuraciones según tu proyecto.
+
+
+> Como vamos a usar python 3.8.10, tenemos que instalarlo con pyenv para no tener problemas
+
+```shell
+pyenv install 3.8.10  # Instala Python 3.8.10 (por ejemplo)
+```
 
 
 ---
