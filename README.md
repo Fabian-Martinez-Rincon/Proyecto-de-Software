@@ -115,6 +115,34 @@ Vamos a levantar la aplicacion base para despues continuar con el trabajo integr
 
 - [Enunciado de la actividad 2](/Otros/Actividad%202%20-%20Aplicación%20base.pdf)
 
+Creamos el entorno virtual
+
+El comando `pyenv virtualenv 3.8.10 myenv` que ejecutaste ha creado un entorno virtual de Python llamado "myenv" basado en la versión 3.8.10 de Python. Te proporcionaré algunos detalles adicionales sobre lo que hiciste y cómo puedes activar y desactivar este entorno virtual.
+
+1. **Creación del Entorno Virtual:**
+   - `pyenv virtualenv 3.8.10 myenv` crea un entorno virtual llamado "myenv" basado en la versión de Python 3.8.10.
+
+2. **Activación del Entorno Virtual:**
+   - Para activar este entorno virtual y utilizarlo, puedes usar el siguiente comando:
+     ```bash
+     pyenv activate myenv
+     ```
+   - Esto te cambiará al entorno virtual "myenv" y usarás la versión de Python 3.8.10 asociada a este entorno.
+
+3. **Desactivación del Entorno Virtual:**
+   - Para salir del entorno virtual y volver al entorno global, puedes usar:
+     ```bash
+     pyenv deactivate
+     ```
+
+4. **Eliminación del Entorno Virtual:**
+   - Si deseas eliminar el entorno virtual "myenv", puedes usar el siguiente comando:
+     ```bash
+     pyenv virtualenv-delete myenv
+     ```
+
+Recuerda que, dentro de un entorno virtual, puedes instalar paquetes y dependencias específicos de ese proyecto sin afectar al entorno global de Python. Esto es útil para mantener la separación y la organización entre diferentes proyectos y sus dependencias.
+
 
 ***Explicamos la infra***
 
@@ -129,10 +157,110 @@ Con este script de CI, cada vez que hagas un push en la rama principal, GitHub A
 pyenv install 3.8.10  # Instala Python 3.8.10 (por ejemplo)
 ```
 
+```
+pyenv local myenv
+```
+
+Bien, una vez que tenemos nuestra aplicación base, vamos a hacer un deploy en Heroku
 
 ---
 
+##### Explicacion
+
+```
+poetry new --name web --src admin
+```
+
+Agregamos el [.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
+
+
+```
+❯ poetry --version
+Poetry version 1.1.12
+```
+
+myenv seria el nombre del entorno virtual con la version de python que queremos usar
+
+
+```
+pyenv local myenv
+```
+
+```
+poetry add flask@latest
+```
+
+```
+poetry add --dev pytest@latest
+```
+
+Si abrimos el pyproject.toml, podemos ver que tenemos las dependencias que instalamos. En la seccion
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.2"
+
+tenemos las dependencias de desarrollo
+
+Como el trabajo es grupal, podemos clonar el repo y hacer
+
+```
+poetry install
+```
+
+Podemos cambiar la version de python de nuestro entorno con
+
+```
+poetry env use 3.8.10
+```
+Antes de esto tenia la 3.10
+
+Y hacemos un, Para actualizar todo
+
+```
+poetry install
+```
+
+Usamos el siguiente comando para activar el entorno virtual
+
+```
+poetry shell
+```
+
+Para ver las versiones instaladas
+
+```
+flask --version
+Python 3.8.10
+Flask 2.3.3
+Werkzeug 2.3.7
+```
+Esto me lo detecto porque tengo flask instalado en mi entorno virtual
+
+Si quiero ejecutar estos comandos sin la necesidad de usar el poetry shell, puedo hacer
+
+```
+poetry run flask --version
+```
+
+Una vez que tenemos todo instalado, hacemos nuestra pequeña app en el directorio src/web en el archivo __init__.py
+
+```python
+from flask import Flask
+
+def create_app():
+    app = Flask(__name__)
+    return app
+
+    @app.get('/')
+    def home():
+        return 'Hello, World!'
+    
+    return app
+```
+
 ### Clase 3 MVC + BluePrints
+
+- [Entrega Parte 1](https://docs.google.com/document/d/e/2PACX-1vQgex-ZEYq-4aHqAbWABMRoZ21I4zZDlHJy0tTwwjLZ3ub70rScHLEq5Ix0MymgB3Ce2GZbwrVRgqqB/pub)
 
 ---
 
