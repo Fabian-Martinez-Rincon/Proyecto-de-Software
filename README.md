@@ -315,6 +315,44 @@ Este test lo podemos ejecutar con
 pytest
 ```
 
+Una vez que tenemos los test, creamos una carpeta dentro de /src/web llamada template que pondremos los archivos `html` y tambien creamos la carpeta `static` en el /src/ para los archivos estaticos que en este caso son los archivos `css` para todas las paginas
+
+El archivo __init__.py quedaria asi
+
+```python
+from flask import Flask, render_template
+
+def create_app(env='development', static_folder='../../static'):
+    app = Flask(__name__, static_folder=static_folder)
+
+    @app.get('/')
+    def home():
+        return render_template('home.html')
+        
+    @app.get('/about')
+    def about():
+        return render_template('about.html')
+    
+    @app.get('/contact')
+    def contact():
+        return render_template('contact.html')
+    
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return render_template('error.html', error_code='404', error_message='Página no encontrada'), 404
+
+    return app
+```
+
+Por ultimo lo subimos a produccion 
+
+```
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin
+```
 
 ---
 
