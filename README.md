@@ -249,7 +249,6 @@ from flask import Flask
 
 def create_app():
     app = Flask(__name__)
-    return app
 
     @app.get('/')
     def home():
@@ -257,6 +256,67 @@ def create_app():
     
     return app
 ```
+
+Y despues creamos un entrypoint en el directorio src/admin en el archivo app.py
+
+> En el contexto de Python y las aplicaciones que se distribuyen usando herramientas como setuptools o Poetry, un "entry point" (punto de entrada) se refiere a un punto específico en tu código donde la ejecución de tu programa comienza.
+
+```python
+from src.web import create_app
+
+app = create_app()
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Una vez que tenemos nuestra app, podemos ejecutar 
+
+```
+flask run
+```
+
+Y me tira la ip http://127.0.0.1:5000/
+
+El decorador
+
+```python
+@app.get('/')
+```
+
+Encierra una funcion que se ejecuta cuando se hace un get a la ruta `/`
+
+Podemos ejecutar el modo debug para no tener que actualizar el servidor cada vez que hacemos un cambio
+
+```
+flask run --debuug
+```
+
+Ya que tenemos el pytest instalado, vamos a hacer un mini test en la carpeta tests
+
+```python
+from web import create_app
+
+app = create_app()
+
+app.testing = True
+
+cliente = app.test_client()
+
+def test_home():
+    response = cliente.get('/')
+    assert response.status_code == 200
+    assert "Hello, World!" in response.data.decode('utf-8')
+```
+
+Este test lo podemos ejecutar con
+
+```
+pytest
+```
+
+
+---
 
 ### Clase 3 MVC + BluePrints
 

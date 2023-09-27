@@ -1,5 +1,12 @@
-from web import __version__
+from web import create_app
 
+app = create_app()
 
-def test_version():
-    assert __version__ == '0.1.0'
+app.testing = True
+
+cliente = app.test_client()
+
+def test_home():
+    response = cliente.get('/')
+    assert response.status_code == 200
+    assert "Hello, World!" in response.data.decode('utf-8')
