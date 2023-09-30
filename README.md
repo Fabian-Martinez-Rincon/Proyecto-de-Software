@@ -409,18 +409,37 @@ Despues en templates creamos una carpeta para issues y dentro de esta, creamos e
 
 ```html
 {% extends 'layout.html' %}
-
-{% block title %}Issues{% endblock %}
+{% block title %}Consultas{% endblock %}
+{% block header %}
+    {{ super() }}
+{% endblock %}
 
 {% block content %}
     <h1>Issues</h1>
-    <ul>
-        {% for issue in issues %}
-            <li>{{ issue.title }}</li>
-        {% endfor %}
-    </ul>
+    <table class="index-table box">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for issue in issues %}
+                <tr>
+                    <td>{{ issue.id }}</td>
+                    <td>{{ issue.email }}</td>
+                    <td>{{ issue.description }}</td>
+                    <td>{{ issue.status }}</td>
+                </tr>
+            {% endfor %}
+    </table>
 {% endblock %}
+
 ```
+
+![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/a13e8d6f-0095-4007-9b84-9535bee8b5ae)
 
 ---
 
