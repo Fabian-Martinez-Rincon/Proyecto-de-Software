@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}Consultas{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h1>Issues</h1>
+    <table class="index-table box">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for issue in issues %}
+                <tr>
+                    <td>{{ issue.id }}</td>
+                    <td>{{ issue.email }}</td>
+                    <td>{{ issue.description }}</td>
+                    <td>{{ issue.status }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+{% endblock %}

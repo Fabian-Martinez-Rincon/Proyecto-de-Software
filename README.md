@@ -360,6 +360,68 @@ git remote add origin
 
 - [Entrega Parte 1](https://docs.google.com/document/d/e/2PACX-1vQgex-ZEYq-4aHqAbWABMRoZ21I4zZDlHJy0tTwwjLZ3ub70rScHLEq5Ix0MymgB3Ce2GZbwrVRgqqB/pub)
 
+Empezamos haciendo un crontrolador con blueprints de flask que nos permite definir las rutas en un archivo aparte asi no tenemos que hardcodear las rutas en el archivo principal
+
+Vamos a desarrollar la aplicacion con dos arquitecturas distintas, una es server side rendering y la otra es client side rendering
+
+Server side rendering es cuando el servidor renderiza la pagina y la envia al cliente (Tambien esta todo el tema de la administracion), y client side rendering es cuando el servidor envia los datos y el cliente renderiza la pagina
+
+Agregamos el nuevo controlador (Para mostrar en la pagina una lista de Issues)
+
+Definimos el modelo y creamos un nuevo modulo dentro de core llamado board (Que contiene todos los datos)
+
+
+**Core** Representa la logica de aplicacion
+
+---
+
+Despues en web, creamos la carpetar controllers y dentro de esta, creamos el archivo issues.py 
+
+```python
+from flask import render_template
+from src.core import board
+
+def index():
+    issues = []
+
+    return render_template('issues/index.html', issues=issues)
+
+def show():
+    pass
+
+def new():
+    pass
+
+def create():
+    pass
+
+def edit():
+    pass
+
+def update():
+    pass
+
+def delete():
+    pass
+```
+
+Despues en templates creamos una carpeta para issues y dentro de esta, creamos el archivo index.html
+
+```html
+{% extends 'layout.html' %}
+
+{% block title %}Issues{% endblock %}
+
+{% block content %}
+    <h1>Issues</h1>
+    <ul>
+        {% for issue in issues %}
+            <li>{{ issue.title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+```
+
 ---
 
 ### Clase 4 Database + Configs + ORM
