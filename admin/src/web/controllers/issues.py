@@ -9,5 +9,3 @@ def index():
     issues = board.list_issues()
 
     return render_template('issues/index.html', issues=issues)
-
-

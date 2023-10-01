@@ -360,56 +360,108 @@ git remote add origin
 
 - [Entrega Parte 1](https://docs.google.com/document/d/e/2PACX-1vQgex-ZEYq-4aHqAbWABMRoZ21I4zZDlHJy0tTwwjLZ3ub70rScHLEq5Ix0MymgB3Ce2GZbwrVRgqqB/pub)
 
-Empezamos haciendo un crontrolador con blueprints de flask que nos permite definir las rutas en un archivo aparte asi no tenemos que hardcodear las rutas en el archivo principal
 
-Vamos a desarrollar la aplicacion con dos arquitecturas distintas, una es server side rendering y la otra es client side rendering
+Agregamos un controlador para mostrar en nuestra pagina una lista de issues(consultas/tickets). En `core` creamos un archivo `board` (tablero) en el que harcodeamos nuestras consultas ya que de momento no tenemos acceso a una base de datos. 
 
-Server side rendering es cuando el servidor renderiza la pagina y la envia al cliente (Tambien esta todo el tema de la administracion), y client side rendering es cuando el servidor envia los datos y el cliente renderiza la pagina
+> Datos generados con chat-gpt
 
-Agregamos el nuevo controlador (Para mostrar en la pagina una lista de Issues)
+```python
+def list_issues():
+    """List all issues."""
+    issues = [
+        {
+            'id': 1,
+            'email': 'john.doe@example.com',
+            'description': 'Unable to log in to the application.',
+            'status': 'new'
+        },
+        {
+            'id': 2,
+            'email': 'sara.jones@example.com',
+            'description': 'App crashes when navigating to the settings page.',
+            'status': 'in-progress'
+        },
+        {
+            'id': 3,
+            'email': 'mark.smith@example.com',
+            'description': 'Feature request: Add dark mode to the application.',
+            'status': 'resolved'
+        },
+        {
+            'id': 4,
+            'email': 'lisa.johnson@example.com',
+            'description': 'Error 404 when trying to access a specific URL.',
+            'status': 'new'
+        },
+        {
+            'id': 5,
+            'email': 'peter.wilson@example.com',
+            'description': 'Performance issue: Application takes too long to load.',
+            'status': 'in-progress'
+        },
+        {
+            'id': 6,
+            'email': 'mary.brown@example.com',
+            'description': 'Bug: Incorrect data displayed in the user profile.',
+            'status': 'resolved'
+        },
+        {
+            'id': 7,
+            'email': 'alex.miller@example.com',
+            'description': 'Feature request: Integrate with third-party API for weather information.',
+            'status': 'new'
+        },
+        {
+            'id': 8,
+            'email': 'chris.white@example.com',
+            'description': 'App freezes when attempting to upload large files.',
+            'status': 'in-progress'
+        },
+        {
+            'id': 9,
+            'email': 'emily.jones@example.com',
+            'description': 'Bug: Unable to delete account from profile settings.',
+            'status': 'resolved'
+        },
+        {
+            'id': 10,
+            'email': 'david.taylor@example.com',
+            'description': 'Feature request: Implement a chat feature within the application.',
+            'status': 'new'
+        }
+    ]
+    return issues
+```
 
-Definimos el modelo y creamos un nuevo modulo dentro de core llamado board (Que contiene todos los datos)
+> Esto en el futuro lo cambiamos por las consultas a la base de datos
 
+Dentro de web creamos la carpeta `controllers` con el archivo `issues.py`
 
-**Core** Representa la logica de aplicacion
-
----
-
-Despues en web, creamos la carpetar controllers y dentro de esta, creamos el archivo issues.py 
+> El Blueprint es una forma de organizar las rutas
 
 ```python
 from flask import render_template
 from src.core import board
+from flask import Blueprint
 
+issues_bp = Blueprint('issues', __name__, url_prefix='/consultas')
+
+@issues_bp.get('/')
 def index():
-    issues = []
+    issues = board.list_issues()
 
     return render_template('issues/index.html', issues=issues)
-
-def show():
-    pass
-
-def new():
-    pass
-
-def create():
-    pass
-
-def edit():
-    pass
-
-def update():
-    pass
-
-def delete():
-    pass
 ```
 
-Despues en templates creamos una carpeta para issues y dentro de esta, creamos el archivo index.html
+Despues de esto, tenemos que crear una carpeta en `templates` con el nombre `issues` y dentro un archivo `index.html`
 
 ```html
 {% extends 'layout.html' %}
+
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='issues.css') }}"> {% endblock %}
+
 {% block title %}Consultas{% endblock %}
+
 {% block header %}
     {{ super() }}
 {% endblock %}
@@ -436,12 +488,7 @@ Despues en templates creamos una carpeta para issues y dentro de esta, creamos e
             {% endfor %}
     </table>
 {% endblock %}
-
 ```
-
-![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/a13e8d6f-0095-4007-9b84-9535bee8b5ae)
-
-
 
 ---
 
