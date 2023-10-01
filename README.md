@@ -441,6 +441,8 @@ Despues en templates creamos una carpeta para issues y dentro de esta, creamos e
 
 ![image](https://github.com/Fabian-Martinez-Rincon/Fabian-Martinez-Rincon/assets/55964635/a13e8d6f-0095-4007-9b84-9535bee8b5ae)
 
+
+
 ---
 
 ### Clase 4 Database + Configs + ORM
