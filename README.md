@@ -603,18 +603,3 @@ cliente = app.test_client()
 
 ---
 
-## Trabajo Integrador Etapa 1
-
-<details><summary>Enunciado </summary>
-
-CIDEPINT es el Centro de Investigación y Desarrollo en Tecnología de Pinturas de Argentina, nacido en los años 70 a partir de una colaboración entre varias instituciones. Su objetivo principal es promover la competitividad de los productos de pintura argentinos a nivel nacional e internacional mediante investigaciones y desarrollos en tecnología de recubrimientos. Además, se dedica a la formación de profesionales especializados y a la creación de normas en la industria. Con el tiempo, ha ampliado sus áreas de enfoque para incluir temas como el tratamiento de aceros, la protección contra la corrosión y soluciones ecológicas. Sus objetivos incluyen investigar, formar recursos humanos, difundir resultados, organizar cursos y colaborar con instituciones afines.
-
-CIDEPINT plantea la necesidad de que exista una plataforma para mostrar y ofrecer los servicios que prestan las diferentes Instituciones.
-
-La aplicación tendrá un aplicación interna de administración (para usuarios y administradores) en Python y Flask, y un portal web en Vue.js que será donde se podrán buscar los servicios ofrecidos por las instituciones registradas. Utilizaremos una base de datos PostgreSQL y se implementarán las API necesarias para las consultas.
-
-</details>
-
-#### Objetivo general
-
-El objetivo de este trabajo integrador es desarrollar una aplicación web que permita registrar y gestionar los servicios ofrecidos por las instituciones o centros de Investigación y Desarrollo en Tecnología de Pinturas. Estos centros contarán con un conjunto de características como nombre, descripción, contacto, página web, redes sociales y ubicación geográfica.
