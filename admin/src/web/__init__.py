@@ -4,8 +4,8 @@ from src.web.config import config
 
 def create_app(env='dev', static_folder='../../static'):
     app = Flask(__name__, static_folder=static_folder)
-    app.config.from_object(config[env])
 
+    app.config.from_object(config[env])
     app.register_blueprint(issues_bp)
 
     @app.get('/')

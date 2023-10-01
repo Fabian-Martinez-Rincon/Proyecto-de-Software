@@ -1,9 +1,12 @@
-
-
 <div align="center"> 
 
 <img src='https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat'>
-<img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'><img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'>
+
+<img src='https://img.shields.io/github/stars/Fabian-Martinez-Rincon/Proyecto-de-Software'>
+
+<img src='https://img.shields.io/github/repo-size/Fabian-Martinez-Rincon/Proyecto-de-Software'>
+
+<br><br>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=1200&pause=1000&color=F78E23&center=true&width=435&lines=Proyecto-de-Software"/></div>
 
@@ -19,10 +22,12 @@
 - Vamos a usar python 3.8.10
 
 
-
 ---
 
-### Clase 0 Presentacion + Python
+### Explicacioness Practicas
+
+<details><summary>Clase 0 Presentacion + Python</summary>
+
 
 En la primera parte explicamos la modalidad de la materia en general.
 Las fechas de las entregas practicas serian las siguientes
@@ -30,7 +35,6 @@ Las fechas de las entregas practicas serian las siguientes
 - Entrega Parte 1: 20/10
 
 En la segunda parte de la clase vimos un poco de python y hicimos una calculadora basica
-
 
 
 - **1)** **Marca de Paquete:** \
@@ -60,10 +64,9 @@ from src import operations
 
 [Codigo Practica 1](/practica/explicacionPracticaUno/)
 
----
+</details>
 
-
-### Clase 1 Git
+<details><summary>Clase 1 Git</summary>
 
 [Vemos la actividad 1](/practica/Actividad%201%20-%20Conceptos%20generales%20Git.pdf)
 
@@ -106,10 +109,9 @@ Tambien usamos el git rebase
 > Parece que ya no vemos nada importante, solo vemos como el profe va creando y fucionando las ramas, lo que si, podemos tener conflictos(o por lo menos yo) a la hora de hacer un pull en una rama que no es la main, por lo que tenemos que hacer un git pull origin main y despues un git push origin nombreRama
 
 
+</details>
 
----
-
-### Clase 2 Aplicacion Base + Deploy
+<details><summary>Clase 2 Aplicacion Base + Deploy</summary>
 
 Vamos a levantar la aplicacion base para despues continuar con el trabajo integrador
 
@@ -354,9 +356,9 @@ git branch -M main
 git remote add origin
 ```
 
----
+</details>
 
-### Clase 3 MVC + BluePrints
+<details><summary>Clase 3 MVC + BluePrints</summary>
 
 - [Entrega Parte 1](https://docs.google.com/document/d/e/2PACX-1vQgex-ZEYq-4aHqAbWABMRoZ21I4zZDlHJy0tTwwjLZ3ub70rScHLEq5Ix0MymgB3Ce2GZbwrVRgqqB/pub)
 
@@ -453,6 +455,8 @@ def index():
     return render_template('issues/index.html', issues=issues)
 ```
 
+El `issues_bp` despues lo importamos en el `__init__.py` de web y lo registramos. Esto nos permite definir las rutas en el archivo `issues.py` y no en el `__init__.py` de web
+
 Despues de esto, tenemos que crear una carpeta en `templates` con el nombre `issues` y dentro un archivo `index.html`
 
 ```html
@@ -490,6 +494,127 @@ Despues de esto, tenemos que crear una carpeta en `templates` con el nombre `iss
 {% endblock %}
 ```
 
+El archivo `__init__.py` quedaria asi
+
+```python
+from flask import Flask, render_template
+from src.web.controllers.issues import issues_bp
+from src.web.config import config
+
+def create_app(env='dev', static_folder='../../static'):
+    app = Flask(__name__, static_folder=static_folder)
+    
+    app.config.from_object(config[env])
+    app.register_blueprint(issues_bp)
+
+    @app.get('/')
+    def home():
+        return render_template('home.html')
+        
+    @app.get('/about')
+    def about():
+        return render_template('about.html')
+    
+    @app.get('/contact')
+    def contact():
+        return render_template('contact.html')
+    
+    @app.get('/consultas')
+    def ussues():
+        return render_template('issues/index.html')
+    
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return render_template('error.html', error_code='404', error_message='Página no encontrada'), 404
+
+    return app
+```
+
+
+la linea 
+
+```python
+app.register_blueprint(issues_bp)
+```
+
+es la que nos permite registrar el blueprint que creamos en el archivo `issues.py`
+
+
+#### Tipos de entornos
+
+- **Entorno de desarrollo**
+- **Entorno de pruebas**
+- **Entorno de producción**
+
+Para configurar todos estos entornos creamos un archivo dentro de web llamado `config.py`
+
+```python
+class Config(object):
+    """Base config"""
+    SECRET_KEY='secret'
+    TESTING=False
+    SESSION_TYPE='filesystem'
+
+class ProdConfig(Config):
+    pass
+
+class DevConfig(Config):
+    pass
+
+class TestConfig(Config):
+    TESTING=True
+    pass
+
+config = {
+    'dev': DevConfig,
+    'prod': ProdConfig,
+    'test': TestConfig
+}
+```
+
+Importamos el archivo `config.py` en el `__init__.py` de web
+
+```python
+app.config.from_object(config[env])
+```
+
+Por ultimo tenemso que modificar `__init__.py` de la carpeta test para que reciba el entorno de test
+
+```python
+from flask import Flask, render_template
+from web import create_app
+
+app = create_app(env='test')
+cliente = app.test_client()
+```
+
+</details>
+
+
+<details open><summary>Clase 4 Database + Configs + ORM</summary>
+
+
+
+</details>
+
+<details><summary>Clase 5 Autenticacion</summary></details>
+
+<details><summary>Clase 6 Autorizacion</summary></details>
+
 ---
 
-### Clase 4 Database + Configs + ORM
+## Trabajo Integrador Etapa 1
+
+<details><summary>Enunciado </summary>
+
+CIDEPINT es el Centro de Investigación y Desarrollo en Tecnología de Pinturas de Argentina, nacido en los años 70 a partir de una colaboración entre varias instituciones. Su objetivo principal es promover la competitividad de los productos de pintura argentinos a nivel nacional e internacional mediante investigaciones y desarrollos en tecnología de recubrimientos. Además, se dedica a la formación de profesionales especializados y a la creación de normas en la industria. Con el tiempo, ha ampliado sus áreas de enfoque para incluir temas como el tratamiento de aceros, la protección contra la corrosión y soluciones ecológicas. Sus objetivos incluyen investigar, formar recursos humanos, difundir resultados, organizar cursos y colaborar con instituciones afines.
+
+CIDEPINT plantea la necesidad de que exista una plataforma para mostrar y ofrecer los servicios que prestan las diferentes Instituciones.
+
+La aplicación tendrá un aplicación interna de administración (para usuarios y administradores) en Python y Flask, y un portal web en Vue.js que será donde se podrán buscar los servicios ofrecidos por las instituciones registradas. Utilizaremos una base de datos PostgreSQL y se implementarán las API necesarias para las consultas.
+
+</details>
+
+#### Objetivo general
+
+El objetivo de este trabajo integrador es desarrollar una aplicación web que permita registrar y gestionar los servicios ofrecidos por las instituciones o centros de Investigación y Desarrollo en Tecnología de Pinturas. Estos centros contarán con un conjunto de características como nombre, descripción, contacto, página web, redes sociales y ubicación geográfica.
