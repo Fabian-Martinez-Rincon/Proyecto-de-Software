@@ -7,9 +7,14 @@ authors = ["Fabian-Martinez-Rincon <fabianmartinezrincon.123@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask = "^2.3.3"
+psycopg2-binary = "^2.9.8"
+flask-sqlalchemy = "^3.1.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.2"
+
+[tool.poetry.group.dev.dependencies]
+flask-shell-ipython = "^0.5.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

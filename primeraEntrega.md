@@ -153,3 +153,7 @@ El nombre de los permisos deberá respetar el patrón modulo_accion, por ejemplo
 La Figura 2 muestra un posible modelo de usuarios, roles y permisos, que pueden utilizar en el trabajo.
 
 <img alt="" src="https://lh3.googleusercontent.com/heDavtgGAijj4mrPJg3l_HSanOSRNTz_I9oUooG0wVZCDtMplDipXGWwxFLbCsQP2gXyGzFx4RnYuZMdM0M6bUm_uAs2XM2VqtE7cF2oMYPll5EwzqhdjghnHZcRqI7LH3CnNCRgKeXX1vLe0dQs7g8" >
+
+A continuación se definen los roles y las acciones que pueden realizar sobre este módulo:
+
+Super Administrador/a: index, show, update, create, destroy.

@@ -20,6 +20,7 @@
 - [Enunciado Primera Entrega](/Documentos/enunciado1raEntrega.md)
 - [Autoevaluacion de Conceptos Basicos](/practica/Actividad%201%20-%20Conceptos%20generales%20Git.pdf)
 - Vamos a usar python 3.8.10
+- [Enunciado Primera Entrega](primeraEntrega.md)
 
 
 ---
@@ -591,15 +592,113 @@ cliente = app.test_client()
 </details>
 
 
-<details open><summary>Clase 4 Database + Configs + ORM</summary>
+### Clase 4 Database + Configs + ORM
 
 
+Primero instalamos un par de librerias para conectarnos a la base de datos
 
-</details>
+```
+poetry add psycopg2-binary@latest
+poetry add flask_sqlalchemy@latest
+```
 
-<details><summary>Clase 5 Autenticacion</summary></details>
+Y ahora instalamos una libreria porque si
 
-<details><summary>Clase 6 Autorizacion</summary></details>
+```
+poetry add flask-shell-ipython@latest --group dev
+```
 
----
+Es una consola un poco mas interactiva y despues hacemos un 
 
+```
+flask shell
+```
+
+Despues en core creamos un archivo dentro de `core` llamado `database.py` 
+
+```python
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+def init_app(app):
+    db.init_app(app)
+```
+
+Y la importamos en el `__init__.py` de `web`
+
+```python
+from src.core import database 
+```
+
+con las siguiente linea dentro de create_app
+
+```python
+database.init_app(app)
+```
+
+Ahora configuramos la base con algunos metodos que queremos que tenga la base de datos
+
+Ahora agregamos a `database.py` los siguientes metodos
+
+```python
+def config_db(app):
+    """
+    Configuracion de la aplicacion
+    """
+
+    @app.teardown_request
+    def close_session(exception=None):
+        db.session.close()
+```
+
+Sirve para que cada vez que se haga una peticion a la base de datos, se cierre la conexion
+
+```python
+def reset_database():
+    """
+    Reinicia la base de datos
+    """
+    db.drop_all()
+    db.create_all()
+```
+
+Este metodo nos sirve para reiniciar la base de datos
+
+Ahora pasamos a una parte en la que el profe nos explica como personalzar comandos, desde el `__init__.py` de web agregamos lo siguiente al final ded la funcion `create_app`
+
+```python
+@app.cli.command(name='reset-database')
+def resertdb():
+    """
+    Comando para reiniciar la base de datos
+    """
+    database.reset_database()
+```
+
+Esto me crea un comando que llama a database y ejecuto su respectiva funcion
+
+Y podemos ejecutar el simplemente el comando usando
+
+```
+flask resertdb
+```
+
+Bien, puede que el comando no funcione pero es porque todavia no tenemos la base de datos configurada
+
+Ahora vamos a configurar la base de datos, y en `config.py` y agregamos lo siguiente
+
+```python
+class DevConfig(Config):
+
+    DB_USER = "postgres"
+    DB_PASSWORD = "postgres"
+    DB_HOST = "localhost"
+    DB_NAME = "proyecto"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_DATABASE_URI = (
+        f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+        )
+```
+
+[Pagina para correr la base de datos](https://dashboard.render.com/)
